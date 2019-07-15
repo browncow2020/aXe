@@ -18,7 +18,7 @@ describe('Selenium-aXe Tutorial', function() {
 
         browser.manage().timeouts().setScriptTimeout(60000);
 
-        browser.get('http://www.deque.com/').then(function () {
+        browser.get('https://www.aa.com/booking/find-flights').then(function () {
             browser.executeAsyncScript(function(callback) {
                 var script = document.createElement('script');
                 script.innerHTML = 'document.documentElement.classList.add("deque-axe-is-ready");';
@@ -42,9 +42,9 @@ describe('Selenium-aXe Tutorial', function() {
     });
 
     it('should just fetch the home page and analyze it', function (done) {
-        browser.findElement(selenium.By.css('body.home')).then(function (element) {
+        browser.findElement(selenium.By.css('body.aa-tier-level-REG')).then(function (element) {
             return element.getAttribute('class').then(function (className) {
-                expect(className.indexOf('home')).toBe(0);
+                expect(className.indexOf('aa-tier-level-REG')).toBe(0);
             });
         }).then(function () {
             AxeBuilder(browser)

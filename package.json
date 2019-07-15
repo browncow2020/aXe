@@ -4,7 +4,7 @@
   "description": "How to set up aXe with WebdriverJS for automated testing.",
   "scripts": {
     "postinstall": "jasmine init",
-    "test": "jasmine spec/custom-rule-test.js"
+    "test": "jasmine spec/remote-url-test.js"
   },
   "author": {
     "name": "Marcy Sutton",
@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "axe-webdriverjs": "^1.1.5",
+    "chromedriver": "^75.1.0",
     "jasmine": "^2.8.0",
-    "selenium-webdriver": "^2.53.3"
+    "selenium-webdriver": "^3.6.0"
   }
 }
